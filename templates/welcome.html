@@ -1,0 +1,33 @@
+{% extends "layout2.html" %}
+{% block body %}
+<table border='2' width='80%'>
+    <caption><b>
+            <h1>Task To-Do</h1>
+        </b></caption><br>
+    <thead>
+        <th>S no.</th>
+        <th>Title</th>
+        <th>subject</th>
+        <th>description</th>
+        <th>Deadline</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </thead>
+    {% for i in range(length)-%}
+    <tr>
+        <td>{{i+1}}</td>
+        <td>{{data[i][1]}}</td>
+        <td>{{data[i][2]}}</td>
+        <td>{{data[i][3]}}</td>
+        <td>{{data[i][4]}}</td>
+        <td>
+            <a href="/update?id={{data[i][0]}}">update</a>
+        </td>
+        <td>
+            <a href="/welcome/{{name}}?id={{data[i][0]}}">delete</a>
+        </td>
+    </tr>
+
+    {% endfor %}
+</table>
+{% endblock %}

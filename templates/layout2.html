@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0%
+        }
+
+        .hdr {
+            background-color: #179b77;
+            height: 40px;
+            text-align: right;
+            color: white;
+            margin: 0;
+            font-size: 20px;
+            padding: 10px
+        }
+
+        a {
+            color: white;
+        }
+
+        a:hover {
+            color: blue
+        }
+
+        thead {
+            background-color: #179b77;
+            color: white;
+            height: 40px;
+            font-size: 30px
+        }
+
+        tbody {
+            background-color: #179b77;
+            color: black;
+        }
+
+        dialog {
+            background: transparent;
+            color: black;
+            padding: 10px;
+            width: 50%;
+            text-align: center;
+            border-color: white;
+            font-size: 20px
+        }
+
+        button {
+            background-color: #179b77;
+            width: 30%;
+            height: 60px;
+            color: white;
+            font-size: 30px;
+            border-color: white
+        }
+
+        input {
+            font-size: 20px;
+            border-color: white;
+            color: white;
+            width: 80%;
+            border: 2;
+            height: 50px;
+            background: transparent
+        }
+
+        input[type='submit'] {
+            width: 60%;
+            background-color: #179b77;
+            font-size: 30px;
+            color: white
+        }
+
+        .dvsn {
+            text-align: center;
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        .division {
+            height: 600px;
+            color: white;
+        }
+
+        footer {
+            color: white;
+            text-align: center;
+        }
+
+        .btn {
+            width: auto;
+            height: auto
+        }
+    </style>
+</head>
+
+<body background='../static/images/bg.jpg'>
+    <header class='hdr'>
+        <nav>
+            <span><a href='/welcome/{{name}}'>Home</a>&nbsp;</span>
+            <span><a href='/add'>Add</a>&nbsp;</span>
+            <span><a href='/logout'>Logout</a>&nbsp;</span>
+            <nav>
+    </header>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <script>alert("Do u want to logout?")</script>
+    {% endif %}
+    {% endwith %}
+    <br>
+    <p>
+    <h1>WELCOME {{name}}</h1>
+    </p>
+    <hr color='white'>
+    <br><br>
+    {% block body %} {% endblock %}
+</body>
+
+</html>

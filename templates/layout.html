@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task-to-do</title>
+        <style>
+            body{text-align:center;margin:0%}
+            div{text-align:center;margin-right:30px}
+            .hdr{background-color:#179b77;height:40px;text-align:right;color:white;margin:0;font-size:20px;padding:10px}
+            a{color:white;}
+            a:hover{color:blue}
+            dialog{background:transparent;color:black;padding:10px;width:50%;text-align:center;border-color:white;font-size:20px}
+            button{background-color:#179b77;width:39%;height:60px;color:white;font-size:30px;border-color:white}
+            input{font-size:20px;border-color:white;color:black;width:80%;border:2;height:50px;background:transparent}
+            input[type='checkbox']{width:fit-content;height:fit-content}
+            input[type='submit']{width:60%;background-color:#179b77;font-size:30px;color:white}
+            .input_size{width:39%}
+            .dvsn{text-align:center;color:red;margin-bottom:10px;}
+            .division{height:600px;color:white;}
+            footer{color:white;text-align:center;}
+            detail{text-align:left}
+        </style>
+    </head>
+    <body background='../static/images/bg.jpg'>
+        <header class='hdr'>
+                <nav>
+                    <span><a href='/'>Home</a>&nbsp;</span>
+                    <span><a href='/contact'>contact</a>&nbsp;</span>
+                    <span><a href='/signup'>Account</a>&nbsp;</span>
+                <nav>
+        </header><br>
+        {% block body %} {% endblock %}
+        <hr color='white'>
+        <footer>
+            <h3>&copy;copyright 2000</h3>
+            <table width='90%' align='center' >
+            <tr>
+    	    <td style='text-align:left'>
+    	    <a href='https://www.facebook.com/yugam.sachdeva.3'><img src='../static/images/fb.png' width='30px' height='30px'></a>
+    	    </td>
+    	    <td style='text-align:center'>
+    	    <a href='https://github.com/itsyugam'><img src='../static/images/github.jpg' width='30px' height='30px'></a> 
+    	    </td>
+    	    <td style='text-align:right'>
+    	    <a href='https://www.instagram.com/yugam_sachdeva_/'><img src='../static/images/insta.png' width='30px' height='30px'></a>
+    	    </td>
+    	    </tr>
+    	    </table>
+            <details close>
+                <summary>
+                    Developer
+                </summary>
+                YUGAM SACHDEVA
+    	        <ul>
+    	        <li>JOB:Student</li>
+    	        <li>MOBILE:7891694045</li>
+    	        <li>EMAIL:yugamsachdeva100@gmail.com</li>
+    	        </ul>
+    	    </details>
+    	    
+        </footer>
+    </body>
+</html>

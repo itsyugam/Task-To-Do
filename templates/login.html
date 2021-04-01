@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block body %}
+<section class='division'>
+    <dialog open>
+        <a href='/signup'><button>Signup</button></a>
+        <a href='#'><button>Login</button></a>
+        <br><br>
+        <h1><b>LOG IN</b></h1>
+        <form method='post'>
+            <input type='email' required placeholder='Email-id' name='email'>
+            <br><br>
+            <input type='password' required placeholder='Password' name='password'>
+            <br><br>
+            <input type='checkbox' name='remember'>Remember me
+            <br><br>
+            {% if result %}
+            <div class='dvsn'>
+                <b>{{result}}</b>
+            </div>
+            {% endif %}
+            <br>
+            <input type='submit' name='signup' value='Welcome back'>
+
+        </form>
+    </dialog>
+</section>
+{% endblock %}

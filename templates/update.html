@@ -1,0 +1,21 @@
+{% extends 'layout2.html' %}
+{% block body %}
+    <section class='division'>
+        <dialog open>
+            <h1><b>UPDATE</b></h1>
+            <form method='post'>   
+            <input type='date' required placeholder='Deadline' name='deadline' placeholder="Deadline">
+            <br><br>
+            {% if result %}
+            <div class='dvsn'>
+            <b>{{result}}</b>
+            </div>
+            {% endif %}
+            <br>
+            <input type='submit' name='update' value='UPDATE'>
+            
+            </form>
+        </dialog> 
+        </section>
+{% endblock %}
+

@@ -1,0 +1,27 @@
+{% extends 'layout2.html' %}
+{% block body %}
+    <section class='division'>
+        <dialog open>
+            <h1><b>ADD TASK</b></h1>
+            <form method='post'>
+            <input type='text' required placeholder='Title' name='title'>
+            <br><br>
+            <input type='text' required placeholder='Subject' name='subject'>
+            <br><br>
+            <input type='text' required placeholder='Description' name='description'>
+            <br><br>
+            <input type='date' required placeholder='Deadline' name='deadline'>
+            <br><br>
+            {% if result %}
+            <div class='dvsn'>
+            <b>{{result}}</b>
+            </div>
+            {% endif %}
+            <br>
+            <input type='submit' name='Add' value='ADD'>
+            
+            </form>
+        </dialog> 
+        </section>
+{% endblock %}
+
